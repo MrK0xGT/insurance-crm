@@ -1,3 +1,17 @@
+# --- 把這段貼在你的 app.py 最上面 ---
+st.markdown("""
+    <style>
+        /* 隱藏右上角的選單 (漢堡選單) */
+        #MainMenu {visibility: hidden;}
+        
+        /* 隱藏頁尾 (Made with Streamlit) */
+        footer {visibility: hidden;}
+        
+        /* 隱藏最上面的彩條與 GitHub 圖示 */
+        header {visibility: hidden;}
+    </style>
+""", unsafe_allow_html=True)
+# ----------------------------------
 import streamlit as st
 import pandas as pd
 import bcrypt
@@ -299,4 +313,5 @@ def main():
                 st.info("尚無資料，請至「新增客戶」分頁建立資料。")
 
 if __name__ == '__main__':
+
     main()

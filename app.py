@@ -1,3 +1,13 @@
+
+import streamlit as st
+import pandas as pd
+import bcrypt
+from supabase import create_client, Client
+from cryptography.fernet import Fernet
+from datetime import datetime, timedelta
+import urllib.parse
+import time
+
 # --- 把這段貼在你的 app.py 最上面 ---
 st.markdown("""
     <style>
@@ -12,15 +22,6 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 # ----------------------------------
-import streamlit as st
-import pandas as pd
-import bcrypt
-from supabase import create_client, Client
-from cryptography.fernet import Fernet
-from datetime import datetime, timedelta
-import urllib.parse
-import time
-
 # --- 1. 初始化設定與安全性 ---
 st.set_page_config(page_title="專業保險管家 CRM", page_icon="🛡️", layout="wide")
 
@@ -315,3 +316,4 @@ def main():
 if __name__ == '__main__':
 
     main()
+
